@@ -9,8 +9,7 @@ public class Main {
         //Bank Transfer Exercise
         BankAccount customer2 = new BankAccount("Brida", 5000);
         BankAccount customer3 = new BankAccount("Alfred", 300);
-        customer2.getWithdrawal(100);
-        customer3.getDeposit(100);
+        customer2.getTransfer(customer3, 100);
         customer2.printAccount();
         customer3.printAccount();
 

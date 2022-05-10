@@ -8,11 +8,18 @@ public class BankAccount {
     }
 
     public double getDeposit(double addDeposit){
-        return accountBalance += addDeposit;
+        accountBalance += addDeposit;
+        return addDeposit;
     }
 
     public double getWithdrawal(double subtractWithdraw){
-        return accountBalance -= subtractWithdraw;
+        accountBalance -= subtractWithdraw;
+        return subtractWithdraw;
+    }
+
+    public double getTransfer(BankAccount transferMoney, double amount){
+        double withdrawMoneyTransfer = this.getWithdrawal(amount);
+        return transferMoney.getDeposit(withdrawMoneyTransfer);
     }
 
     public void printAccount(){
