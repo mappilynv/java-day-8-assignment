@@ -10,8 +10,9 @@ public class Product {
         this.productQuantity = productQuantity;
     }
 
-    public double totalCost(){
-        return productCost*productQuantity;
+    public void totalCost(){
+        double total = productCost*productQuantity;
+        System.out.println("Total cost is "+total);
     }
 
     public void printProduct(){
